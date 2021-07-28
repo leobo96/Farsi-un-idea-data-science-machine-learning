@@ -15,11 +15,13 @@ function change_to_theory() {
   el_quiz.classList.add("hidden");
   el_teoria.classList.remove("hidden");
   change_title("Teoria");
+  el_titolo.classList.remove("text-centered");
 }
 function change_to_question() {
   el_teoria.classList.add("hidden");
   el_quiz.classList.remove("hidden");
   change_title("Domanda");
+  el_titolo.classList.remove("text-centered");
 }
 function change_to_index() {
   el_quiz.classList.add("hidden");
@@ -27,6 +29,7 @@ function change_to_index() {
   el_resources.classList.add("hidden");
   el_indice.classList.remove("hidden");
   change_title("Indice");
+  el_titolo.classList.add("text-centered");
 }
 function change_to_resources() {
   el_indice.classList.add("hidden");
@@ -251,7 +254,7 @@ function introduzione() {
     "Non per altro l'Economist ha definito i dati la risorsa di maggior valore del mondo. (Persino maggiore del petrolio!)<br><br>Le aziende ne hanno colto l'importanza e utilizzano i dati per ottimizzare i processi aziendali, identificare opportunità e trend, lanciare nuovi prodotti, offrire un miglior servizio ai clienti e in generale per prendere decisioni più informate. Oggi per le aziende è diventato cruciale sfruttare il potenziale dei dati per vincere la concorrenza.<br><br>Per questo motivo sempre più aziende mettono su dei team di data science, composti da figure di vario tipo: data analyst, data scientist, data engineer, machine learning engineer.<br><br>In questo corso vedremo come avviene il processo di estrazione del valore dai dati e il ruolo delle varie figure coinvolte.",
   ];
 
-  setTheory("Introduzione", content_introduzione);
+  setTheory("1. Introduzione", content_introduzione);
 
   QuestionIndex = 0;
   setQuestion(QuestionIndex);
@@ -263,7 +266,7 @@ function dati() {
     "I dati non strutturati sono invece dati 'grezzi'. I dati hanno questa forma prima di essere organizzati e per immaginarseli basta pensare ad una collezione di immagini, un insieme di testi o anche una serie di misurazioni fatte con un particolare strumento. I dati multimediali in generale sono non strutturati.<br><br>I dati semi-strutturati sono invece una via di mezzo. Il modo migliore di pensarli è la mail. Ogni mail ha dei dati etichettati come il destinatario, il mittente, l'ora di invio, ma presenta dati non strutturati nel corpo, che può contenetere di base un testo, ma anche immagini e allegati di vario tipo.<br><br>",
   ];
 
-  setTheory("Dati", content_dati);
+  setTheory("2. Dati", content_dati);
 
   QuestionIndex = 1;
   setQuestion(QuestionIndex);
@@ -278,7 +281,7 @@ function data_analytics() {
     "Data analytics è un concetto che raccoglie tutti gli aspetti trattati fin'ora. Dall'idea di utilizzare i dati per guidare le decisioni, al lavoro svolto dai data analyst all'insieme di strumenti e metodi che chi lavora nel mondo dei dati utilizza ogni giorno (ecosistema).<br><br>",
   ];
 
-  setTheory("Data Analytics", content_data_analytics);
+  setTheory("3. Data Analytics", content_data_analytics);
 
   QuestionIndex = 2;
   setQuestion(QuestionIndex);
@@ -291,7 +294,7 @@ function big_data() {
     "Un'altra idea abbastanza condivisa è che i big data si caratterizzano per un certo numero di 'V'. Qualcuno sostiene 3 'V', qualcun'altro 5, qualcuno ne ha individuate più di 20.<br><br>Cosa sono queste 'V'?<br><br>Nel modello a 3 'V' si sostiene che i Big data siano caratterizzati da:<br><br><ol><li>Velocità, che si riferisce alla velocità con cui i dati sono accumulati. In alcuni casi l'accumulo di dati è un processo 'real-time' che non si ferma mai. Basta pensare che ogni 60 secondi, ore di video sono caricare su youtube e alla velocità con cui i dati si accumulano in ore, giorni e anni.</li><li>Volume, che si riferisce alla quantità di dati che vengono conservati. La popolazione mondiale è di circa 7 miliardi e la grande maggioranza utilizza dispositivi come smartphone, computer e dispositivi indossabili, ognuno dei quali produce dati. Circa 2.5 quintilioni di bytes ogni giorno!</li><li>Varietà, che si riferisce alla diversità dei formati di dati. Immagini, testi, video, suoni, dati sulla salute, ecc.</li></ol>",
   ];
 
-  setTheory("Big Data", content_big_data);
+  setTheory("4. Big Data", content_big_data);
 
   QuestionIndex = 3;
   setQuestion(QuestionIndex);
@@ -304,7 +307,7 @@ function big_data_analytics() {
     "Per riuscire a fare 'magie' i data scientist hanno bisogno di dati. Ma non tutti i dati sono utilizzabili: c'è bisogno di dati 'puliti'.<br><br>Questo significa che i dati grezzi e incasinati devono essere convertiti in un formato consistente che può essere usato all'interno degli sturmenti del data scientist.<br><br>La pulizia dei dati, che può sembrare un'attività che non richiede grandi competenze, può tuttavia diventare incredibilmente difficile e richiedere molto tempo quando la grandezza dei dati è rilevante. Si dice che il data scientist può spendere l'80% del suo tempo a fare 'data wrangling' - districamento - prima che i dati siano pronti per essere analizzati. Una vera e propria inefficienza.<br><br>Qui viene in aiuto il data engineer, che utilizza principalmente linguaggi di programmazione come Python e R, ma anche algoritmi di apprendimento automatico, per preparare i dati e immagazzinari per bene nei data warehouse - veri e propri magazzini di dati strutturati.",
     "Abbiamo dunque ampliato il campo della data analytics, includendo tutte le tecnologie e le persone coinvolte nella gestione e analisi dei big data.<br><br> Nel prossimo argomento vedremo nel dettaglio in cosa consiste il machine learning.",
   ];
-  setTheory("Big Data Analytics", content_big_data_analytics);
+  setTheory("5. Big Data Analytics", content_big_data_analytics);
 
   QuestionIndex = 4;
   setQuestion(QuestionIndex);
@@ -318,7 +321,7 @@ function machine_learning() {
     "Tra le altre, l'applicazione di machine learning forse più lucrativa al momento è legata alla publicità online. Un algoritmo di machine learning che riceve in input delle pubblicità con varie caratteristiche e alcune informazioni personali degli utenti cerca di associare la combinazione di caratteristiche utente/pubblicità al fatto che l'utente clicchera o meno sulla pubblicità. Con questo meccanismo si cerca di proporre delle pubblicità mirate sempre più precise.<br><br>È interessante notare che nella progettazione del compito che si vuole far apprendere alla macchina, una parte fondamentale del processo riguarda la selezione delle 'features', ossia caratteristiche dei dati che si ritiene utili per comprendere il problema e che aiutano la macchina ad imparare.",
     "Gli algoritmi di Machine Learning che operano cercando la regola che porta a B dato A vengono chiamati 'supervised learning' - apprendimento supervisionato. Questo perchè per funzionare richiedono una fase di addestramento supportata da un essere umano che guida la macchina giudicando le risposte fornite dalla macchina come giuste o sbagliate. Non è però l'unico approccio.<br><br>Vedremo adesso più nel dettaglio i diversi approcci di machine learning e i diversi problemi che possono risolvere.",
   ];
-  setTheory("Machine Learning", content_machine_learning);
+  setTheory("6. Machine Learning", content_machine_learning);
 
   QuestionIndex = 5;
   setQuestion(QuestionIndex);
@@ -335,7 +338,7 @@ function machine_learning_categories() {
     "L'apprendimento rinforzato invece è in assoluto quello meno comune. Anziché fornire l'output atteso, come avviene nell'apprendimento supervisionato, viene fornito un premio o una punizione occasionale. Quando l'algoritmo fornisce come esito il risultato atteso, viene premiato e dunque il comportamento diventa più comune. Quando l'esito differisce da quello atteso, allora viene punito, rendendo il comportamento meno comune. L'idea alla base è quello di addestrare l'algoritmo nello stesso modo in cui si addestrerebbe un cane.",
     "Nelle prossime sezioni introdurremo gli aspetti generali della data science e il collegamento tra questa e il machine learning. In seguito approfondiremo più nel dettaglio il ciclo di vita di un progetto di data science. ",
   ];
-  setTheory("Tipi di Machine Learning", content_machine_learning_categories);
+  setTheory("7. Tipi di Machine Learning", content_machine_learning_categories);
 
   QuestionIndex = 6;
   setQuestion(QuestionIndex);
@@ -350,7 +353,7 @@ function datascience() {
     "Da definizione, il data product è un dispositivo tecnico che:<ol><li>Utilizza i dati come input</li><li>Processa quei dati per restituire un risultato generato algoritmicamente.</li></ol>Facendo un esempio. Un data product è il filtro antispam della posta elettronica che facendo lavorare un algoritmo, elabora le e-mail in ingresso per determinare se un messaggio sia spam o no.",
     "Un data product è sostanzialmente una funzionalià pensata per essere incapsulata in un'applicazione.<br><br>Come forse avrete intuito si sta facendo riferimento a prodotti che hanno un motore di machine learning al proprio interno.<br><br>Nella prossima sezione analizzaremo più nel dettaglio il collegamento tra data science, intesa come scoperta di conoscenza e machine learning.",
   ];
-  setTheory("Data Science", content_datascience);
+  setTheory("8. Data Science", content_datascience);
 
   QuestionIndex = 7;
   setQuestion(QuestionIndex);
@@ -363,7 +366,7 @@ function datascience_ml() {
     "In termini più concreti i confini tra Data Science e Machine Learning non sono così netti. Spesso infatti si confondono.<br><br>Facciamo una sintesi<br><br>In un'azienda, investire nel machine learning si traduce spesso nell'assunzione di un team di Data Science che si pone l'obiettivo di sviluppare un data product (e quindi di un algoritmo di machine learning). I data product più profittevoli sembrerebbero derivare dall'approccio definito apprendimento supervisionato, principalmente perchè è quello che permette di fare previsioni.<br><br>Nondimeno, nella Data Science (intesa come scoperta di intuizioni) non è raro utilizzare algoritmi di machine learning nelle fasi di pulizia e qualche volta nella fase di analisi. Alcuni utilizzi potrebbero infatti essere la classificazione automatica dei dati nella fase di pulizia e la clusterizzazione in sottogruppi quando si volesse fare un'analisi sulle correlazioni dei dati.",
     "Nella prossima sezione cercheremo di capire il ciclo di vita di un progetto di data science. ",
   ];
-  setTheory("Data Science e Machine Learning", content_datascience_ml);
+  setTheory("9. Data Science e Machine Learning", content_datascience_ml);
 
   QuestionIndex = 8;
   setQuestion(QuestionIndex);
@@ -381,7 +384,10 @@ function datascience_lifecycle() {
     "Fase 7: Comunicazione<br><br>Nell'ultima fase di un progetto di data science si comunica al management il risultato dell'analisi. Il data scientist utilizza tecniche di data visualization (come grafici e tabelle) e software specifici (come tableau)  per comunicare in modo semplice ed efficace i risultati.",
     "Con questo argomento si conclude il corso introduttivo ai concetti della data science e del machine learning.<br><br>Dove si può approfondire?<br><br>Nella prossima sezione sono indicate alcune risorse utili e interessanti per approfondire gli argomenti trattati in questo corso, con un'attenzione rivolta anche agli aspetti più applicativi.<br><br>Un saluto e un in bocca al lupo per questo viaggio! :)",
   ];
-  setTheory("Ciclo di vita della Data Science", content_datascience_lifecycle);
+  setTheory(
+    "10. Ciclo di vita della Data Science",
+    content_datascience_lifecycle
+  );
 
   QuestionIndex = 9;
   setQuestion(QuestionIndex);
