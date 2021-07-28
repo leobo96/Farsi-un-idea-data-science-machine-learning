@@ -10,12 +10,12 @@ title, body: #34495e */
 
 :root {
   font-size: 62.5%;
-  --body-padding: 7rem;
+  --body-min-padding: 7rem;
 }
 
 @media screen and (max-width: 425px) {
   :root {
-    --body-padding: 1.5rem;
+    --body-min-padding: 1.5rem;
   }
 }
 
@@ -30,13 +30,13 @@ body {
   max-width: 70rem;
 
   box-sizing: content-box;
-  padding: 0rem var(--body-padding);
+  padding: 0 var(--body-min-padding);
 }
 
 header,
 main {
   width: 100%;
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 /* Basic styling */
@@ -58,6 +58,10 @@ ol {
   margin-left: 25px;
 }
 
+section > * {
+  margin-bottom: 2rem;
+}
+
 /* Typography */
 h1,
 h2,
@@ -76,6 +80,7 @@ h3 {
   font-size: 2.4rem;
 }
 
+/* Snippets */
 .hidden {
   display: none;
 }
@@ -89,7 +94,7 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 30px;
+  /* padding-top: 30px; */
 }
 .buttn {
   display: flex;
@@ -129,7 +134,7 @@ h3 {
 
 .argomento {
   justify-content: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   padding-left: 1.5rem;
   text-transform: none;
 }
@@ -140,13 +145,22 @@ h3 {
   box-shadow: 1px 1px 2px #34495e;
 }
 
+#to-resources {
+  background: rgb(36, 133, 165);
+  background: linear-gradient(
+    45deg,
+    rgba(36, 133, 165, 1) 35%,
+    rgba(25, 218, 163, 1) 100%
+  );
+  color: #fff;
+  text-align: center;
+}
 /* TEORIA */
 #teoria .arrows {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin-top: 20px;
 }
 
 #arrow-left,
@@ -187,22 +201,8 @@ h3 {
   border: #fc4c4c solid 1px;
 }
 
-#success-message {
-  margin-top: 20px;
-}
-
 /* RISORSE */
-#to-resources {
-  background: rgb(36, 133, 165);
-  background: linear-gradient(
-    45deg,
-    rgba(36, 133, 165, 1) 35%,
-    rgba(25, 218, 163, 1) 100%
-  );
-  color: #fff;
-  margin-top: 30px;
-  text-align: center;
-}
+
 #risorse {
   align-items: flex-start;
 }
@@ -213,7 +213,6 @@ h3 {
 }
 .risorsa {
   display: flex;
-  margin: 10px;
 }
 .risorsa img {
   min-width: 150px;
@@ -227,12 +226,11 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 30px;
+  margin-left: 3rem;
 }
 #risorse .testo_risorsa a {
   font-size: 20px;
 }
 .source-code {
-  margin-top: 20px;
   font-size: 14px;
 }
