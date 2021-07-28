@@ -79,7 +79,11 @@ h2 {
 h3 {
   font-size: 2.4rem;
 }
-
+/* Links */
+a {
+  text-decoration: none;
+  color: #ff07ac;
+}
 /* Snippets */
 .hidden {
   display: none;
@@ -135,7 +139,6 @@ h3 {
 }
 
 .argomento {
-  /* justify-content: flex-start; */
   margin-bottom: 1rem;
   padding-left: 1.5rem;
 }
@@ -192,15 +195,6 @@ h3 {
 }
 
 /* RISORSE */
-
-#risorse {
-  align-items: flex-start;
-}
-
-#risorse a {
-  text-decoration: none;
-  color: #ff07ac;
-}
 .risorsa {
   display: flex;
 }
@@ -218,7 +212,7 @@ h3 {
   justify-content: center;
   margin-left: 3rem;
 }
-#risorse .testo_risorsa a {
+.testo_risorsa a {
   font-size: 20px;
 }
 .source-code {
